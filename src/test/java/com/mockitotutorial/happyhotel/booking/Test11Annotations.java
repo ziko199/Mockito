@@ -31,8 +31,8 @@ class Test11Annotations {
     void should_PayCorrectPrice_When_InputOK() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, true);
 
         // when
@@ -50,13 +50,13 @@ class Test11Annotations {
     void should_PayCorrectPrices_When_MultipleCalls() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, true);
 
         BookingRequest bookingRequest2 = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 02),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 2),
                 2, true);
 
         List<Double> expectedValues = Arrays.asList(400.0, 100.0);
