@@ -26,8 +26,8 @@ class Test13StrictStubbing {
     void should_InvokePayment_When_Prepaid() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, false);
 
         lenient().when(paymentServiceMock.pay(any(), anyDouble())).thenReturn("1");

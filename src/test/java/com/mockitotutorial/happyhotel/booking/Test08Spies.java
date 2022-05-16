@@ -30,8 +30,8 @@ class Test08Spies {
     void should_MakeBooking_When_InputOK() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, true);
 
         // when
@@ -46,8 +46,8 @@ class Test08Spies {
     void should_CancelBooking_When_InputOK() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, true);
 
         bookingRequest.setRoomId("1.3");

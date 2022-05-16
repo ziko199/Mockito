@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.*;
 
-
 class Test09MockingVoidMethods {
 
     private BookingService bookingService;
@@ -34,8 +33,8 @@ class Test09MockingVoidMethods {
     void should_ThrowException_When_MailNotReady() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, false);
 
         doThrow(new BusinessException()).when(mailSenderMock).sendBookingConfirmation(any());
@@ -53,8 +52,8 @@ class Test09MockingVoidMethods {
     void should_NotThrowException_When_MailNotReady() {
         // given
         BookingRequest bookingRequest = new BookingRequest("1",
-                LocalDate.of(2020, 01, 01),
-                LocalDate.of(2020, 01, 05),
+                LocalDate.of(2020, 1, 1),
+                LocalDate.of(2020, 1, 5),
                 2, false);
 
         doNothing().when(mailSenderMock).sendBookingConfirmation(any());
